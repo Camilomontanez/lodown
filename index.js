@@ -25,7 +25,7 @@ module.exports.each = each;
 
 
 /**
- * indetity: is a function design to take a value and return the same value.
+ * idetity: is a function design to take a value and return the same value.
  * 
  * @param {value} it takes a value.
  * @return {value} it return the same value given in the parameter.
@@ -37,8 +37,8 @@ function identity(value){
 module.exports.identity = identity;
 
 /**
- *typeOf: Designed to take a value and tested for datatype. it returns an array 
- * with the name of the data type as a string.
+ *typeOf: Designed to take a value and tested for datatype. it returns 
+ * the data type as a string.
  * 
  * @param {value} the value to be tested to find out its datatype
  * @return {string} action: the function returns a string with the name of the
@@ -50,29 +50,22 @@ function typeOf(value){
         return 'array';
     } else if(value === null){
         return 'null';
-    } else {
-        return typeof value;
+    } else if(value instanceof Date){
+        return Date;
+    } else{
+    return typeof value;
     }
 }
 
 module.exports.typeOf = typeOf;
 
 /**
- * first: Designed to slice the first elements of an array and return
- * them in a new array.
- * the parameter(number) dictates the amount of elements we want slice out 
- * from the begining (index 0) of the 'original' array.
- * There are a few exceptions to the description above based on parameters:
- * if param array is not an array it returns an empty array
- * if param number is not given or not a number it return just the
- * first element in param array.
- * if param number is a negative number it returns an empty array
- * if the param number is greater than the  length of the param array it 
- * return the whole array.
+ * first: is design to return a new array full of the first elements of
+ *  array given as an argument, the number of elements is determined by the number given as an argument.
  * 
  * 
  * @param {Array} Array: The array over which to iterate.
- * @param {Number} Number: The number dictates the amount elements we want to 
+ * @param {Number} Number: The number dictates the amount elements  to 
  * slice out from the param array starting at index 0
  * @return {newArray} new Array: it returns a new array full off all the elements
  * sliced out of the original array.
@@ -96,25 +89,14 @@ module.exports.typeOf = typeOf;
 module.exports.first = first; 
 
 /**
- * last: is design to slice the last elements of the array and return them into
- * a new array.
+ * last: is design to slice the last elements of the  argument array and return them into
+ * a new array. The number of elements in the new array are detetmined by the argument number. 
  * 
- * the parameter(number) dictates the amount of elements we want slice out 
- * from the end  of the 'original' array.
- * 
- * There are a few exceptions to the description above based on parameters:
- * if param array is not an array it returns an empty array
- * if param number is not given or not a number it return just the
- * last element in param array.
- * if param number is a negative number it returns an empty array
- * if the param number is greater than the  length of the param array it 
- * return the whole array.
- * 
- * 
+ *
  * 
  * @param {Array} Array: The array over which to iterate.
- * @param {Number} Number: The number dictates the amount elements we want to 
- * slice out from the param array starting at index 0
+ * @param {Number} Number: The number dictates the amount elements  to 
+ * sliced out from the param array starting at index 0
  * @return {newArray} new Array: it returns a new array full off all the elements
  * sliced out of the original array.
  * 
@@ -139,14 +121,14 @@ module.exports.last = last;
 /**
  * indexOf: is design to find the index of the first occurance of a specific 
  * value given within an array.
- * if the value is found ill return a number number that represents the index
- * if the value is not found it will return a -1
+ * if the value is found the function will  return a  number that represents the index
+ * if the value is not found the function will return a -1
  * 
  * 
  * 
  * @param {Array} Array: The array over which to iterate.
  * @param {value} value: A value to search for within the param array.
- * @return {number} number: it returns a positive number represeting the index 
+ * @return {number/index} number: it returns a positive number represeting the index 
  *                          or -1 to represent the value was not found.
  * 
  */
@@ -165,11 +147,11 @@ module.exports.indexOf = indexOf;
 
 
 /**
- * contains: is design to  communicates wether a value is inside an array.
+ * contains: is design to return  true or false depending on wether a value is inside an array.
  * 
  * 
  * @param {Array} Array: The array over which to iterate.
- * @param {Value} Value: The value that we want to look for within the array
+ * @param {Value} Value: The value that to look for within the array
  * @return {Boolean} Boolean:it return truet to confirm the value exists within 
  *                   the array or false if the value is not found withing the 
  *                   array.
@@ -184,12 +166,12 @@ module.exports.indexOf = indexOf;
 module.exports.contains = contains; 
 
 /**
- * unique: is design to iterate over an array and return a new array  
+ * unique: is design to iterate over an array and return a new array(uniqueArray)  
  *         with the same elements but with no duplicates.
  * 
  * 
  * @param {Array} Array: The array over which to iterate.
- * @return {Array} Array: it returns a new array containing the same elelemts 
+ * @return {uniquearray} uniquearray: it returns a new array containing the same elelemts 
  *                        of param array but with no duplicates.
  * 
  * 
@@ -209,11 +191,11 @@ module.exports.unique = unique;
 
 /**
  * filter: is design to  to filter the elements of an array that pass 
- *         a test given by param function and return them into a new array.
+ *         a test given by an argument function and return them into a new array.
  * 
  * 
  * @param {Array} Array: The array over which to iterate.
- * @param {function} function: the function or test in this case we want to call
+ * @param {function} function: the function to be called
  *                             upon every element of the array.
  * @return {Array} Array:it returns a new array full of all the elements from the 
  *                       param array that passes the test the param fucntion 
@@ -234,11 +216,11 @@ module.exports.filter = filter;
 
 /**
  * reject: is design to  filter the elements of an array that do not pass the
- *          test of the param function and returns them into a new array.
+ *          test of the argument function and returns them into a new array.
  * 
  * 
  * @param {Array} Array: The array over which to iterate.
- * @param {function} function: the function or test in this case we want to call
+ * @param {function} function: the function that is called
  *                             upon every element of the array.
  * @return {Array} Array:it returns a new array full of all the elements from the 
  *                       param array that  DO NOT pass the test the param function 
@@ -255,15 +237,12 @@ function reject(array,test){
 module.exports.reject = reject; 
 
 /**
- * partition: is design to iterate over an array and evaluate every element to
- *            truthy or falsy. The elements that are truthy will be placed 
- *            in a subarray  and the falsy in another subarray. the Function
- *            will return an array with the falsy and truthy subarrays in it. 
+ * partition: is design to separate the elements that pass/fail the test function. . 
  * 
  * @param {Array} Array: The array over which to iterate.
- * @param {function} function: the function or test in this case we want to call
+ * @param {function} function: the function that is called
  *                             upon every element of the array.
- * @return {Array} Array:it returns a new array that contains two subarrays. 
+ * @return {newArray} newArray(bigArray):it returns a new array that contains two subarrays. 
  *                   one with the truthy values and one with the falsey values.
  */
  
@@ -288,10 +267,10 @@ module.exports.partition = partition;
  *      element if it is an array or eveny keyvalue pair if it is an object. It 
  *      returns an array full of the elements the function acted on. 
  * 
- * @param {Array} Array: The array over which to iterate.
+ * @param {collection} collection: collection over which to iterate.
  * @param {function} function: the function that acts or that is called 
  *                             upon every element of the array.
- * @return {Array} Array:it returns a new array that contains all the elements
+ * @return {newArray} newArray:it returns a new array that contains all the elements
  *                       of the original array after have ben called by the 
  *                       param function.
  */
@@ -311,9 +290,9 @@ module.exports.map = map;
  *         a specific properties value within the objects of the array. 
  *         These values are returned in a new array. 
  * 
- * @param {Array} Array: The array of objects over which to iterate.
+ * @param {ArrayOfObjects} ArrayOfObjects: The array of objects over which to iterate.
  * @param {property} property: the property that is being searched for
- * @return {Array} new Array:it returns a new array that contains all the values
+ * @return {NewArray} new Array:it returns a new array that contains all the values
  *                           that matched the property in each object inside the
  *                           param array.
  * 
@@ -398,20 +377,14 @@ function some(collection, test){
 module.exports.some = some;  
 
 /**
- * reduce: is design to iterate over an array and act upon every element of the
- *          array with a function, the results of whatever im trying to do with 
- *          function are assigned to the seed which later is returned.
- *          if the seed param is not passed the iterations starts at the first 
- *          element of the array and the seed will take the type of the first 
- *          element of the array.
- * 
+ * reduce: is design  to iterate over an array and accumulate the values into
+ * a single usable data type
  * @param {array} array: an array over which to iterate.
  * @param {function} function: the function that is used to act on every element
  *                             of the array
  * @param {seed} seed: is an accumulator and i have the option of  passing 
  *                     it or not passing it. 
- * @return {seed} seed:it returns the seed which holds final answer of what you
- *                       have chossesn to reduce or do with the param function.
+ * @return {seed} seed:it returns the seed which holds final the value that has been reduced.
  */
  
  
@@ -430,11 +403,9 @@ module.exports.reduce = reduce;
 
 /**
  * extend: is design to iterate over an infinite number of objects and copy
- *        all tthey key values pairs into the first param object. If the keys
- *        are already exist this are overwritten with the key value pair with 
- *        the key value pair from other objects.
+ *        all the key values pairs into the first param object.
  * 
- * @param {object1} object1: in an object that will hold other key values
+ * @param {object1} object1: is an object that will hold other key values
  *                            from other objects.
  * @param {other objects} other objects: the objects that hold elements that 
  *                                       will be copied into first object.
