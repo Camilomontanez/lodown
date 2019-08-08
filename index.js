@@ -64,8 +64,8 @@ module.exports.typeOf = typeOf;
  *  array given as an argument, the number of elements is determined by the number given as an argument.
  * 
  * 
- * @param {Array} Array: The array over which to iterate.
- * @param {Number} Number: The number dictates the amount elements  to 
+ * @param {array} Array: The array over which to iterate.
+ * @param {number} Number: The number dictates the amount elements  to 
  * slice out from the param array starting at index 0
  * @return {newArray} new Array: it returns a new array full off all the elements
  * sliced out of the original array.
@@ -94,8 +94,8 @@ module.exports.first = first;
  * 
  *
  * 
- * @param {Array} Array: The array over which to iterate.
- * @param {Number} Number: The number dictates the amount elements  to 
+ * @param {array} Array: The array over which to iterate.
+ * @param {number} Number: The number dictates the amount elements  to 
  * sliced out from the param array starting at index 0
  * @return {newArray} new Array: it returns a new array full off all the elements
  * sliced out of the original array.
@@ -194,10 +194,10 @@ module.exports.unique = unique;
  *         a test given by an argument function and return them into a new array.
  * 
  * 
- * @param {Array} Array: The array over which to iterate.
- * @param {function} function: the function to be called
+ * @param {array} Array: The array over which to iterate.
+ * @param {test} function: the function to be called
  *                             upon every element of the array.
- * @return {Array} Array:it returns a new array full of all the elements from the 
+ * @return {array} Array:it returns a new array full of all the elements from the 
  *                       param array that passes the test the param fucntion 
  *                       provided.
  */
@@ -268,9 +268,9 @@ module.exports.partition = partition;
  *      returns an array full of the elements the function acted on. 
  * 
  * @param {collection} collection: collection over which to iterate.
- * @param {function} function: the function that acts or that is called 
+ * @param {action} function: the function that acts or that is called 
  *                             upon every element of the array.
- * @return {newArray} newArray:it returns a new array that contains all the elements
+ * @return {array} new array:it returns a new array that contains all the elements
  *                       of the original array after have ben called by the 
  *                       param function.
  */
@@ -290,9 +290,9 @@ module.exports.map = map;
  *         a specific properties value within the objects of the array. 
  *         These values are returned in a new array. 
  * 
- * @param {ArrayOfObjects} ArrayOfObjects: The array of objects over which to iterate.
+ * @param {array} ArrayOfObjects: The array of objects over which to iterate.
  * @param {property} property: the property that is being searched for
- * @return {NewArray} new Array:it returns a new array that contains all the values
+ * @return {array} new Array:it returns a new array that contains all the values
  *                           that matched the property in each object inside the
  *                           param array.
  * 
