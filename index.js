@@ -6,8 +6,8 @@
  * each: Designed to loop over a collection, Array or Object, and applies the 
  * action Function to each value in the collection.
  * 
- * @param {Array or Object} collection: The collection over which to iterate.
- * @param {Function} action: The Function to be applied to each value in the 
+ * @param {array or object} collection: The collection over which to iterate.
+ * @param {function} action: The Function to be applied to each value in the 
  * collection
  */
 function each(collection, action) {
@@ -41,7 +41,7 @@ module.exports.identity = identity;
  * the data type as a string.
  * 
  * @param {value} the value to be tested to find out its datatype
- * @return {string} action: the function returns a string with the name of the
+ * @return {string} string: the function returns a string with the name of the
  * datatype
  */
 
@@ -64,8 +64,8 @@ module.exports.typeOf = typeOf;
  *  array given as an argument, the number of elements is determined by the number given as an argument.
  * 
  * 
- * @param {array} Array: The array over which to iterate.
- * @param {number} Number: The number dictates the amount elements  to 
+ * @param {array} array: The array over which to iterate.
+ * @param {number} number: The number dictates the amount elements  to 
  * slice out from the param array starting at index 0
  * @return {newArray} new Array: it returns a new array full off all the elements
  * sliced out of the original array.
@@ -94,8 +94,8 @@ module.exports.first = first;
  * 
  *
  * 
- * @param {array} Array: The array over which to iterate.
- * @param {number} Number: The number dictates the amount elements  to 
+ * @param {array} array: The array over which to iterate.
+ * @param {number} number: The number dictates the amount elements  to 
  * sliced out from the param array starting at index 0
  * @return {newArray} new Array: it returns a new array full off all the elements
  * sliced out of the original array.
@@ -126,7 +126,7 @@ module.exports.last = last;
  * 
  * 
  * 
- * @param {Array} Array: The array over which to iterate.
+ * @param {array} array: The array over which to iterate.
  * @param {value} value: A value to search for within the param array.
  * @return {number/index} number: it returns a positive number represeting the index 
  *                          or -1 to represent the value was not found.
@@ -150,8 +150,8 @@ module.exports.indexOf = indexOf;
  * contains: is design to return  true or false depending on wether a value is inside an array.
  * 
  * 
- * @param {Array} Array: The array over which to iterate.
- * @param {Value} Value: The value that to look for within the array
+ * @param {array} array: The array over which to iterate.
+ * @param {value} value: The value that to look for within the array
  * @return {Boolean} Boolean:it return truet to confirm the value exists within 
  *                   the array or false if the value is not found withing the 
  *                   array.
@@ -170,7 +170,7 @@ module.exports.contains = contains;
  *         with the same elements but with no duplicates.
  * 
  * 
- * @param {Array} Array: The array over which to iterate.
+ * @param {array} array: The array over which to iterate.
  * @return {uniquearray} uniquearray: it returns a new array containing the same elelemts 
  *                        of param array but with no duplicates.
  * 
@@ -194,7 +194,7 @@ module.exports.unique = unique;
  *         a test given by an argument function and return them into a new array.
  * 
  * 
- * @param {array} Array: The array over which to iterate.
+ * @param {array} array: The array over which to iterate.
  * @param {test} function: the function to be called
  *                             upon every element of the array.
  * @return {array} Array:it returns a new array full of all the elements from the 
@@ -219,10 +219,10 @@ module.exports.filter = filter;
  *          test of the argument function and returns them into a new array.
  * 
  * 
- * @param {Array} Array: The array over which to iterate.
+ * @param {array} array: The array over which to iterate.
  * @param {function} function: the function that is called
  *                             upon every element of the array.
- * @return {Array} Array:it returns a new array full of all the elements from the 
+ * @return {array} array:it returns a new array full of all the elements from the 
  *                       param array that  DO NOT pass the test the param function 
  *                       provided.
  */
@@ -239,7 +239,7 @@ module.exports.reject = reject;
 /**
  * partition: is design to separate the elements that pass/fail the test function. . 
  * 
- * @param {Array} Array: The array over which to iterate.
+ * @param {array} array: The array over which to iterate.
  * @param {function} function: the function that is called
  *                             upon every element of the array.
  * @return {newArray} newArray(bigArray):it returns a new array that contains two subarrays. 
@@ -315,7 +315,7 @@ module.exports.pluck = pluck;
  * @param {collection} collection: a collection over which to iterate.
  * @param {function} function: the function that is used to test every element
  *                             collection for true or truthy
- * @return {boolean} Boolean:it returns a boolean, that states true if all elements 
+ * @return {boolean} boolean:it returns a boolean, that states true if all elements 
  *                           pass the test or false if at least one fails.
  * 
  */
@@ -349,7 +349,7 @@ module.exports.every = every;
  * @param {collection} collection: a collection over which to iterate.
  * @param {function} function: the function that is used to test every element
  *                             collection for true or truthy.
- * @return {boolean} Boolean:it returns a boolean, that states true if at least
+ * @return {boolean} boolean:it returns a boolean, that states true if at least
  *                           one element passes the test or false if all dont 
  *                           dont pass the test.
  * 
@@ -410,7 +410,7 @@ module.exports.reduce = reduce;
  * @param {other objects} other objects: the objects that hold elements that 
  *                                       will be copied into first object.
  * 
- * @return {Object1} object1:it returns object1 with the transfered/copied key
+ * @return {object1} object1:it returns object1 with the transfered/copied key
  *                           value pairs from other objects.
  *    
  */
