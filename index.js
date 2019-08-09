@@ -64,8 +64,8 @@ module.exports.typeOf = typeOf;
  *  array given as an argument, the number of elements is determined by the number given as an argument.
  * 
  * 
- * @param {array} array: The array over which to iterate.
- * @param {number} number: The number dictates the amount elements  to 
+ * @param {Array} array: The array over which to iterate.
+ * @param {Number} number: The number dictates the amount elements  to 
  * slice out from the param array starting at index 0
  * @return {newArray} new Array: it returns a new array full off all the elements
  * sliced out of the original array.
@@ -94,8 +94,8 @@ module.exports.first = first;
  * 
  *
  * 
- * @param {array} array: The array over which to iterate.
- * @param {number} number: The number dictates the amount elements  to 
+ * @param {Array} array: The array over which to iterate.
+ * @param {Number} number: The number dictates the amount elements  to 
  * sliced out from the param array starting at index 0
  * @return {newArray} new Array: it returns a new array full off all the elements
  * sliced out of the original array.
@@ -170,8 +170,8 @@ module.exports.contains = contains;
  *         with the same elements but with no duplicates.
  * 
  * 
- * @param {array} array: The array over which to iterate.
- * @return {uniquearray} uniquearray: it returns a new array containing the same elelemts 
+ * @param {Array} array: The array over which to iterate.
+ * @return {Array} uniqueArray: it returns a new array containing the same elelemts 
  *                        of param array but with no duplicates.
  * 
  * 
@@ -267,10 +267,10 @@ module.exports.partition = partition;
  *      element if it is an array or eveny keyvalue pair if it is an object. It 
  *      returns an array full of the elements the function acted on. 
  * 
- * @param {collection} collection: collection over which to iterate.
- * @param {action} function: the function that acts or that is called 
+ * @param {Array or Object} collection: collection over which to iterate.
+ * @param {Function} action: the function that acts or that is called 
  *                             upon every element of the array.
- * @return {array} new array:it returns a new array that contains all the elements
+ * @return {Array} new array:it returns a new array that contains all the elements
  *                       of the original array after have ben called by the 
  *                       param function.
  */
@@ -290,9 +290,9 @@ module.exports.map = map;
  *         a specific properties value within the objects of the array. 
  *         These values are returned in a new array. 
  * 
- * @param {array} ArrayOfObjects: The array of objects over which to iterate.
- * @param {property} property: the property that is being searched for
- * @return {array} new Array:it returns a new array that contains all the values
+ * @param {Array} array: The array of objects over which to iterate.
+ * @param {Property} property: the property that is being searched for
+ * @return {Array} new array:it returns a new array that contains all the values
  *                           that matched the property in each object inside the
  *                           param array.
  * 
